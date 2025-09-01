@@ -1,17 +1,22 @@
- 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
 }
-a { text-decoration: none; color: #0066cc; }
 
- 
+a { 
+  text-decoration: none; 
+  color: #0066cc; 
+}
+
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -19,26 +24,41 @@ a { text-decoration: none; color: #0066cc; }
   padding: 15px 40px;
   background: #f4f4f4;
 }
-.logo { font-size: 1.4rem; font-weight: bold; }
-.logo span { color: #c5c7c9; }
+
+.logo { 
+  font-size: 1.4rem; 
+  font-weight: bold; 
+}
+
+.logo span { 
+  color: #c5c7c9; 
+}
+
 .nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
-.nav a { color: #131313; font-weight: 500; }
 
- 
+.nav a { 
+  color: #131313; 
+  font-weight: 500; 
+}
+
+
 .hero {
   display: flex;
   flex-wrap: wrap;
   background: #eee;
   padding: 20px;
 }
+
 .hero-image { flex: 1; }
 .hero-image img { width: 100%; border-radius: 6px; }
+
 .hero-text { flex: 1; padding: 24px; }
 .hero-text h1 { font-size: 2rem; margin-bottom: 10px; }
+
 .btn {
   display: inline-block;
   background: #3c4956;
@@ -47,7 +67,7 @@ a { text-decoration: none; color: #0066cc; }
   margin-top: 10px;
   border-radius: 4px;
 }
- 
+
 
 .info {
   display: flex;
@@ -55,13 +75,16 @@ a { text-decoration: none; color: #0066cc; }
   margin: 40px 20px;
   gap: 20px;
 }
+
 .info-left { flex: 2; }
 .info-left img { width: 100%; margin-bottom: 15px; }
+
 .info-right { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+
 .card { display: flex; gap: 10px; align-items: center; }
 .card img { width: 120px; height: auto; border-radius: 6px; }
 
- 
+
 .courses {
   background: #f9f9f9;
   padding: 72px 32px;
@@ -121,20 +144,22 @@ a { text-decoration: none; color: #0066cc; }
   color: #555;
 }
 
- 
+
 .thesis { padding: 40px 20px; }
 .thesis h2 { margin-bottom: 20px; }
+
 .thesis-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .video { flex: 2; }
 .thesis-info { flex: 1; display: flex; flex-direction: column; gap: 20px; }
 .thesis-card { display: flex; gap: 10px; }
 .thesis-card img { width: 100px; height: auto; border-radius: 6px; }
 
- 
+
 footer {
   background: #f4f4f4;
   text-align: center;
@@ -142,13 +167,13 @@ footer {
   margin-top: 30px;
 }
 
- 
 @media (max-width: 768px) {
   .nav ul { flex-direction: column; display: none; }
   .hero { flex-direction: column; }
   .info { flex-direction: column; }
   .thesis-grid { flex-direction: column; }
 }
+
 
 .menu-toggle {
   display: none;
@@ -171,3 +196,85 @@ footer {
   }
 }
 
+.about {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  color: #555;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.about-card {
+  background: #fff;
+  padding: 25px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.about-card i {
+  color: #0073e6;
+  margin-bottom: 15px;
+}
+
+.about-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #0073e6;
+}
+
+.about-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.about .btn {
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 14px;
+  background: #0073e6;
+  color: #fff;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.about .btn:hover {
+  background: #005bb5;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about h1 {
+    font-size: 28px;
+  }
+  .about p {
+    font-size: 15px;
+  }
+}
